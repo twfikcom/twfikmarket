@@ -90,7 +90,7 @@ const App: React.FC = () => {
         setSeoData('Premium Domain Marketplace | TWFIK', 'Find and secure the perfect premium domain name for your brand. Browse our curated selection of memorable domains.', {'@context': 'https://schema.org', '@type': 'Service', 'name': 'Premium Domain Marketplace', 'description': 'A marketplace for premium, brandable domain names.', 'provider': {'@type': 'Organization', 'name': 'TWFIK'}});
         break;
       default:
-        setSeoData('TWFIK - Web Solutions', 'TWFIK offers cutting-edge web development, AI prompts, digital tools, and premium domains to elevate your online presence.', {'@context': 'https://schema.org', '@type': 'Organization', 'name': 'TWFIK', 'url': 'https://twfik.com', 'logo': 'https://twfik.com/logo.png'});
+        setSeoData('TWFIK - Web Solutions', 'TWFIK offers cutting-edge web development, AI prompts, digital tools, and premium domains to elevate your online presence.', {'@context': 'https://schema.org', '@type': 'Organization', 'name': 'TWFIK', 'url': 'https://twfikcom.github.io/twfikmarket', 'logo': 'https://twfikcom.github.io/twfikmarket/logo.png'});
     }
     window.scrollTo(0, 0);
   }, [view]);
