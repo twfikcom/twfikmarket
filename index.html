@@ -140,17 +140,17 @@
         animation: lightning-strike 2.5s ease-in-out infinite;
       }
     </style>
-    <!-- 1. Import React libraries -->
+    <!-- 1. Import React libraries via an importmap -->
     <script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/"
-  }
-}
-</script>
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/"
+      }
+    }
+    </script>
     
     <!-- 2. Add Babel Standalone to transpile TSX in the browser -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
