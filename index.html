@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/twfikcom/twfikmarket/main/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="TWFIK offers cutting-edge web development, AI prompts, digital tools, and premium domains to elevate your online presence." />
     <title>TWFIK - Web Solutions</title>
@@ -140,22 +140,23 @@
         animation: lightning-strike 2.5s ease-in-out infinite;
       }
     </style>
-    <!-- 
-      The complex script loading system (importmap, babel, etc.) is replaced
-      by a single line pointing to an on-the-fly bundling service. This service
-      fetches the entire application from GitHub, compiles it in the cloud, and
-      serves a single, browser-ready JavaScript file.
-    -->
-    <script type="module" src="https://esm.codes/gh/twfikcom/twfikmarket/main/index.tsx"></script>
-<script type="importmap">
+    <!-- 1. The Import Map (The "Dictionary" for JS imports) -->
+    <script type="importmap">
 {
   "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
     "react/": "https://aistudiocdn.com/react@^19.2.0/"
   }
 }
 </script>
+
+    <!-- 2. The In-Browser Compiler (The "Engine" to run TSX) -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- 3. The Application Entrypoint (The "Recipe") -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
 </head>
   <body class="bg-black text-white">
     <div id="root"></div>
