@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TWFIK offers cutting-edge web development, AI prompts, digital tools, and premium domains to elevate your online presence." />
+    <title>TWFIK - Web Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes flash {
+        0%, 100% {
+          opacity: 1;
+          filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #0ff) drop-shadow(0 0 10px #0ff);
+        }
+        50% {
+          opacity: 0.6;
+          filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #0ff) drop-shadow(0 0 25px #0ff);
+        }
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes background-pan {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      @keyframes lightning-strike {
+        0%, 100% {
+            text-shadow: none;
+        }
+        50% {
+            text-shadow: 0 0 15px #fff, 0 0 25px #fff, 0 0 40px #fff;
+        }
+        49%, 51% {
+             text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+        }
+      }
+      .animate-flash {
+        animation: flash 1.5s infinite;
+      }
+      .animate-fadeIn {
+        animation: fadeIn 1s ease-out forwards;
+      }
+      .animate-background-pan {
+        background-size: 200% 200%;
+        animation: background-pan 15s ease infinite;
+      }
+      .animate-lightning-strike {
+        animation: lightning-strike 2.5s ease-in-out infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-black text-white">
+    <div id="root"></div>
+  </body>
+</html>
