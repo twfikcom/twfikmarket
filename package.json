@@ -1,9 +1,7 @@
 {
   "name": "twfik",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
-  "homepage": "https://twfikcom.github.io/twfikmarket/"
-
   "type": "module",
   "scripts": {
     "dev": "vite",

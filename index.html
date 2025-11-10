@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://twfikcom.github.io/twfikmarket/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="TWFIK offers cutting-edge web development, AI prompts, digital tools, and premium domains to elevate your online presence." />
     <title>TWFIK - Web Solutions</title>
@@ -38,6 +38,94 @@
              text-shadow: 0 0 5px #fff, 0 0 10px #fff;
         }
       }
+      
+      /* Header Logo Animations */
+      @keyframes icon-glow {
+        0%, 100% {
+          filter: drop-shadow(0 0 1.5px #0ff);
+        }
+        50% {
+          filter: drop-shadow(0 0 4px #0ff);
+        }
+      }
+
+      @keyframes beta-shimmer {
+        0%, 100% {
+          box-shadow: 0 0 4px #2563eb, inset 0 0 2px rgba(255,255,255,0.4);
+          opacity: 0.8;
+        }
+        50% {
+          box-shadow: 0 0 8px #3b82f6, inset 0 0 4px rgba(255,255,255,0.7);
+          opacity: 1;
+        }
+      }
+
+      .animate-icon-glow {
+        animation: icon-glow 2.5s ease-in-out infinite;
+      }
+
+      .animate-beta-shimmer {
+        animation: beta-shimmer 2s ease-in-out infinite;
+      }
+
+      /* Loader Animations */
+      @keyframes draw-square {
+        to { stroke-dashoffset: 0; }
+      }
+      
+      @keyframes bright-flash {
+        0%, 100% { box-shadow: none; }
+        50% { box-shadow: 0 0 15px #fff, 0 0 25px #fff, 0 0 40px #0ff; }
+      }
+
+      @keyframes text-reveal {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes pulse-blue {
+        0%, 100% {
+          transform: scale(1);
+          filter: drop-shadow(0 0 2px #0ff);
+        }
+        50% {
+          transform: scale(1.1);
+          filter: drop-shadow(0 0 5px #0ff) drop-shadow(0 0 10px #0ff);
+        }
+      }
+
+      .animate-loader-square {
+        stroke-dasharray: 240;
+        stroke-dashoffset: 240;
+        animation: draw-square 1s ease-out forwards 0.2s;
+      }
+
+      .animate-loader-T {
+        opacity: 0;
+        animation: text-reveal 0.5s ease-out forwards 1s;
+      }
+      
+      .animate-loader-flash-container {
+         animation: bright-flash 0.5s ease-out 1.2s;
+      }
+
+      .animate-loader-text-reveal {
+        display: inline-block;
+        opacity: 0;
+        animation: text-reveal 0.5s ease-out forwards;
+      }
+
+      .animate-loader-dot {
+         opacity: 0;
+         animation: text-reveal 0.5s ease-out forwards, pulse-blue 1.5s ease-in-out infinite 2s;
+      }
+
       .animate-flash {
         animation: flash 1.5s infinite;
       }

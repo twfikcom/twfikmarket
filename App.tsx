@@ -13,6 +13,7 @@ import WebsiteServiceDetailPage from './components/detail-pages/WebsiteServiceDe
 import AiPromptDetailPage from './components/detail-pages/AiPromptDetailPage';
 import ToolDetailPage from './components/detail-pages/ToolDetailPage';
 import BlogPostPage from './components/BlogPostPage';
+import Loader from './components/Loader';
 
 import { servicesData } from './data/services';
 import { promptsData } from './data/prompts';
@@ -152,11 +153,29 @@ const BackgroundGrid: React.FC = () => (
   `}</style>
 );
 
-const AppWrapper: React.FC = () => (
-  <>
-    <BackgroundGrid />
-    <App />
-  </>
-);
+const AppWrapper: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500); // Loader will be visible for 2.5 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+  
+  return (
+    <>
+      <BackgroundGrid />
+      <Loader isLoading={isLoading} />
+      <div 
+        className={`transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+        aria-hidden={isLoading}
+      >
+        <App />
+      </div>
+    </>
+  );
+};
 
 export default AppWrapper;

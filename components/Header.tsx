@@ -1,33 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Page, View } from '../App';
 
 const AnimatedLogo: React.FC<{setView: (view: View) => void}> = ({ setView }) => {
-  const [showFullLogo, setShowFullLogo] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowFullLogo(true);
-    }, 1500); // Duration of the flash animation
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    <a href="#" onClick={(e) => { e.preventDefault(); setView({ page: 'home' }); }} className="flex items-center space-x-2 text-2xl md:text-3xl font-bold tracking-wider cursor-pointer">
-      <div className="relative w-8 h-8">
-        <span 
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-1 bg-cyan-400 animate-flash"
-          style={{ animationDelay: '0.1s' }}
-        ></span>
-        <span 
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-8 bg-cyan-400 animate-flash"
-        ></span>
-      </div>
-      <div className="relative overflow-hidden">
-        <span 
-          className={`transition-all duration-700 ease-in-out ${showFullLogo ? 'opacity-100' : 'opacity-0'}`}
+    <a 
+      href="#" 
+      onClick={(e) => { e.preventDefault(); setView({ page: 'home' }); }} 
+      className="flex items-center gap-3 text-xl md:text-2xl font-bold tracking-wider cursor-pointer group" 
+      aria-label="TWFIK Home"
+    >
+      <svg className="w-8 h-8 transition-transform duration-300 group-hover:rotate-90" viewBox="0 0 80 80" aria-hidden="true">
+        <rect 
+          className="stroke-cyan-400 animate-icon-glow"
+          x="10" y="10" width="60" height="60" 
+          strokeWidth="4" fill="none"
+        />
+        <text 
+          className="fill-white font-bold"
+          x="50%" y="50%" 
+          dominantBaseline="middle" textAnchor="middle" 
+          fontSize="40"
         >
-          WFIK.
+          T
+        </text>
+      </svg>
+       <div className="flex items-baseline">
+        <span>
+          TWFIK<span className="text-cyan-400">.</span>
         </span>
+        <sup 
+          className="ml-1 text-xs font-bold text-white bg-blue-600 px-1.5 py-0.5 rounded animate-beta-shimmer"
+        >
+          Beta
+        </sup>
       </div>
     </a>
   );

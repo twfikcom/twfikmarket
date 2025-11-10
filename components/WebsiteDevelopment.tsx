@@ -34,7 +34,16 @@ const CtaButtons: React.FC<{ navigateToContact: (subject: string) => void; subje
   </div>
 );
 
-const PricingCard = ({ plan, price, features, popular = false }: { plan: string; price: number; features: string[]; popular?: boolean }) => (
+// FIX: Defined a dedicated interface for PricingCard props and typed the component
+// with React.FC to resolve type errors with special React props like 'key'.
+interface PricingCardProps {
+  plan: string;
+  price: number;
+  features: string[];
+  popular?: boolean;
+}
+
+const PricingCard: React.FC<PricingCardProps> = ({ plan, price, features, popular = false }) => (
   <div className={`relative p-8 rounded-xl border flex flex-col transition-all duration-300 ${popular ? 'bg-gray-900/50 border-cyan-400/50' : 'bg-gray-900/30 border-gray-800/50 hover:border-cyan-400/50'}`}>
     {popular && <div className="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-cyan-500 text-gray-900 font-bold text-sm px-4 py-1 rounded-full">MOST POPULAR</div>}
     <div className="flex-grow">
