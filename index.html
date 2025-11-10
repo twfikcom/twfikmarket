@@ -140,19 +140,23 @@
         animation: lightning-strike 2.5s ease-in-out infinite;
       }
     </style>
-  <script type="importmap">
+    <!-- 1. Import React libraries -->
+    <script type="importmap">
 {
   "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "/app": "./index.tsx"
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
   }
 }
 </script>
-<script type="module">
-  import '/app';
-</script>
+    
+    <!-- 2. Add Babel Standalone to transpile TSX in the browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- 3. Load the main application script using Babel. `data-type="module"` is crucial for imports. -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
 </head>
   <body class="bg-black text-white">
     <div id="root"></div>
