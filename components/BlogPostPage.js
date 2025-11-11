@@ -1,13 +1,6 @@
 import React from 'react';
-import { BlogPost } from '../types.js';
-import { View } from '../App.js';
 
-interface BlogPostPageProps {
-  post: BlogPost;
-  setView: (view: View) => void;
-}
-
-const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, setView }) => {
+const BlogPostPage = ({ post, setView }) => {
   return (
     <div className="animate-fadeIn">
       <div className="container mx-auto px-6 py-16 md:py-24 max-w-4xl">

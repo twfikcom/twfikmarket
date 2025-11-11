@@ -1,10 +1,8 @@
 import React from 'react';
 import PageHeader from './ui/PageHeader.js';
-import { OnlineTool } from '../types.js';
-import { View } from '../App.js';
 import { toolsData } from '../data/tools.js';
 
-const ToolCard: React.FC<{ tool: OnlineTool; onView: (id: string) => void; }> = ({ tool, onView }) => {
+const ToolCard = ({ tool, onView }) => {
   const Icon = tool.icon;
   return (
     <div 
@@ -26,8 +24,8 @@ const ToolCard: React.FC<{ tool: OnlineTool; onView: (id: string) => void; }> = 
 };
 
 
-const OnlineToolsPage: React.FC<{ setView: (view: View) => void }> = ({ setView }) => {
-  const handleViewTool = (id: string) => {
+const OnlineToolsPage = ({ setView }) => {
+  const handleViewTool = (id) => {
     setView({ page: 'toolDetail', id });
   };
   

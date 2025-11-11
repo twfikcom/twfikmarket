@@ -1,10 +1,6 @@
 import React from 'react';
 
-interface LoaderProps {
-  isLoading: boolean;
-}
-
-const Loader: React.FC<LoaderProps> = ({ isLoading }) => {
+const Loader = ({ isLoading }) => {
   return (
     <div className={`
       fixed inset-0 bg-black flex justify-center items-center z-[9999]

@@ -1,10 +1,8 @@
 import React from 'react';
 import PageHeader from './ui/PageHeader.js';
-import { WebsiteService } from '../types.js';
-import { View } from '../App.js';
 import { servicesData } from '../data/services.js';
 
-const PricingCard: React.FC<{ service: WebsiteService; onSelect: (id: string) => void; }> = ({ service, onSelect }) => (
+const PricingCard = ({ service, onSelect }) => (
   <div className={`relative p-8 rounded-xl border flex flex-col transition-all duration-300 ${service.popular ? 'bg-gray-900/50 border-cyan-400/50' : 'bg-gray-900/30 border-gray-800/50 hover:border-cyan-400/50'}`}>
     {service.popular && <div className="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-cyan-500 text-gray-900 font-bold text-sm px-4 py-1 rounded-full">MOST POPULAR</div>}
     <div className="flex-grow">
@@ -22,8 +20,8 @@ const PricingCard: React.FC<{ service: WebsiteService; onSelect: (id: string) =>
   </div>
 );
 
-const WebsiteDevelopmentPage: React.FC<{ setView: (view: View) => void }> = ({ setView }) => {
-  const handleSelectPlan = (id: string) => {
+const WebsiteDevelopmentPage = ({ setView }) => {
+  const handleSelectPlan = (id) => {
     setView({ page: 'websiteDetail', id });
   };
 

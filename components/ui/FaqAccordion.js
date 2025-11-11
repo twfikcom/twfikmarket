@@ -1,18 +1,9 @@
 import React, { useState } from 'react';
 
-interface FaqItem {
-  question: string;
-  answer: string;
-}
+const FaqAccordion = ({ items }) => {
+  const [openIndex, setOpenIndex] = useState(null);
 
-interface FaqAccordionProps {
-  items: FaqItem[];
-}
-
-const FaqAccordion: React.FC<FaqAccordionProps> = ({ items }) => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggleItem = (index: number) => {
+  const toggleItem = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 

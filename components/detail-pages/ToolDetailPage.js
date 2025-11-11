@@ -1,18 +1,10 @@
 import React from 'react';
-import { OnlineTool } from '../../types.js';
-import { View } from '../../App.js';
 import Breadcrumb from '../ui/Breadcrumb.js';
 import CtaButtons from '../ui/CtaButtons.js';
 import FaqAccordion from '../ui/FaqAccordion.js';
 import { toolsData } from '../../data/tools.js';
 
-interface ToolDetailPageProps {
-  tool: OnlineTool;
-  navigateToContact: (subject: string) => void;
-  setView: (view: View) => void;
-}
-
-const ToolDetailPage: React.FC<ToolDetailPageProps> = ({ tool, navigateToContact, setView }) => {
+const ToolDetailPage = ({ tool, navigateToContact, setView }) => {
   const Icon = tool.icon;
   const otherTools = toolsData.filter(t => t.id !== tool.id);
   

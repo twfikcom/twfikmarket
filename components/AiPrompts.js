@@ -1,7 +1,7 @@
 import React from 'react';
 import { WhatsappIcon } from './icons/WhatsappIcon.js';
 
-const PageHeader = ({ title, subtitle }: { title: string; subtitle: string }) => (
+const PageHeader = ({ title, subtitle }) => (
   <div className="text-center py-16 md:py-24 bg-black">
     <h1 className="text-5xl md:text-6xl font-extrabold text-white animate-fadeIn">
       <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-fuchsia-500">
@@ -14,7 +14,7 @@ const PageHeader = ({ title, subtitle }: { title: string; subtitle: string }) =>
   </div>
 );
 
-const CtaButtons: React.FC<{ navigateToContact: (subject: string) => void; subject: string }> = ({ navigateToContact, subject }) => (
+const CtaButtons = ({ navigateToContact, subject }) => (
   <div className="flex flex-col sm:flex-row gap-4 mt-8">
     <button
       onClick={() => navigateToContact(`Inquiry: ${subject}`)}
@@ -34,7 +34,7 @@ const CtaButtons: React.FC<{ navigateToContact: (subject: string) => void; subje
   </div>
 );
 
-const PromptDemoCard = ({ title, prompt, output, isImage = false }: { title: string; prompt: string; output: string; isImage?: boolean }) => (
+const PromptDemoCard = ({ title, prompt, output, isImage = false }) => (
   <div className="bg-gray-900/50 p-8 rounded-xl border border-gray-800/50">
     <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
     <div className="mb-6">
@@ -56,7 +56,7 @@ const PromptDemoCard = ({ title, prompt, output, isImage = false }: { title: str
   </div>
 );
 
-const AiPrompts: React.FC<{ navigateToContact: (subject: string) => void }> = ({ navigateToContact }) => {
+const AiPrompts = ({ navigateToContact }) => {
   return (
     <div className="animate-fadeIn">
       <PageHeader title="AI Prompts Marketplace" subtitle="Unlock limitless creativity with our expertly engineered prompts." />

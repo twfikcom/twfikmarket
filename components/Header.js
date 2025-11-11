@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Page, View } from '../App.js';
 
-const AnimatedLogo: React.FC<{setView: (view: View) => void}> = ({ setView }) => {
+const AnimatedLogo = ({ setView }) => {
   return (
     <a 
       href="#" 
@@ -38,12 +37,7 @@ const AnimatedLogo: React.FC<{setView: (view: View) => void}> = ({ setView }) =>
   );
 };
 
-interface HeaderProps {
-  currentPage: Page;
-  setView: (view: View) => void;
-}
-
-const navLinks: { name: string; page: Page }[] = [
+const navLinks = [
   { name: 'Index', page: 'home' },
   { name: 'Websites development', page: 'websites' },
   { name: 'AI prompts', page: 'prompts' },
@@ -53,10 +47,10 @@ const navLinks: { name: string; page: Page }[] = [
   { name: 'Blog', page: 'blog' },
 ];
 
-const Header: React.FC<HeaderProps> = ({ currentPage, setView }) => {
+const Header = ({ currentPage, setView }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleLinkClick = (page: Page) => {
+  const handleLinkClick = (page) => {
     setView({ page });
     setIsMobileMenuOpen(false);
   };

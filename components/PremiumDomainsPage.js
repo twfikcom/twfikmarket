@@ -3,15 +3,7 @@ import PageHeader from './ui/PageHeader.js';
 import CtaButtons from './ui/CtaButtons.js';
 import FaqAccordion from './ui/FaqAccordion.js';
 
-// FIX: Defined a dedicated interface for DomainRow props and typed the component
-// with React.FC to resolve type errors with special React props like 'key'.
-interface DomainRowProps {
-  domain: string;
-  price: string;
-  navigateToContact: (subject: string) => void;
-}
-
-const DomainRow: React.FC<DomainRowProps> = ({ domain, price, navigateToContact }) => (
+const DomainRow = ({ domain, price, navigateToContact }) => (
   <div className="grid grid-cols-3 items-center gap-4 p-4 border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors duration-200">
     <p className="font-bold text-lg text-white col-span-1">{domain}</p>
     <p className="text-cyan-400 font-semibold text-lg text-center col-span-1">{price}</p>
@@ -27,7 +19,7 @@ const DomainRow: React.FC<DomainRowProps> = ({ domain, price, navigateToContact 
 );
 
 
-const PremiumDomainsPage: React.FC<{ navigateToContact: (subject: string) => void }> = ({ navigateToContact }) => {
+const PremiumDomainsPage = ({ navigateToContact }) => {
   const domains = [
     { name: 'innovate.ai', price: '$5,000' },
     { name: 'cybersolutions.io', price: '$4,200' },

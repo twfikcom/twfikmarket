@@ -1,18 +1,10 @@
 import React from 'react';
-import { WebsiteService } from '../../types.js';
-import { View } from '../../App.js';
 import Breadcrumb from '../ui/Breadcrumb.js';
 import CtaButtons from '../ui/CtaButtons.js';
 import FaqAccordion from '../ui/FaqAccordion.js';
 import { servicesData } from '../../data/services.js';
 
-interface WebsiteServiceDetailPageProps {
-  service: WebsiteService;
-  navigateToContact: (subject: string) => void;
-  setView: (view: View) => void;
-}
-
-const WebsiteServiceDetailPage: React.FC<WebsiteServiceDetailPageProps> = ({ service, navigateToContact, setView }) => {
+const WebsiteServiceDetailPage = ({ service, navigateToContact, setView }) => {
   const otherServices = servicesData.filter(s => s.id !== service.id);
 
   return (

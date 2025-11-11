@@ -3,11 +3,10 @@ import ServiceCard from './ServiceCard.js';
 import { LightbulbIcon } from './icons/LightbulbIcon.js';
 import { ToolsIcon } from './icons/ToolsIcon.js';
 import { CodeIcon } from './icons/CodeIcon.js';
-import { Service } from '../types.js';
 import { WhatsappIcon } from './icons/WhatsappIcon.js';
 
 
-const PageHeader = ({ title, subtitle }: { title: string; subtitle: string }) => (
+const PageHeader = ({ title, subtitle }) => (
   <div className="text-center py-16 md:py-24 bg-black">
     <h1 className="text-5xl md:text-6xl font-extrabold text-white animate-fadeIn">
       <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-fuchsia-500">
@@ -20,7 +19,7 @@ const PageHeader = ({ title, subtitle }: { title: string; subtitle: string }) =>
   </div>
 );
 
-const CtaButtons: React.FC<{ navigateToContact: (subject: string) => void; subject: string }> = ({ navigateToContact, subject }) => (
+const CtaButtons = ({ navigateToContact, subject }) => (
   <div className="flex flex-col sm:flex-row gap-4 mt-8">
     <button
       onClick={() => navigateToContact(`Inquiry: ${subject}`)}
@@ -41,7 +40,7 @@ const CtaButtons: React.FC<{ navigateToContact: (subject: string) => void; subje
 );
 
 
-const tools: Service[] = [
+const tools = [
   {
     icon: LightbulbIcon,
     title: "SEO Keyword Analyzer",
@@ -59,7 +58,7 @@ const tools: Service[] = [
   },
 ];
 
-const OnlineTools: React.FC<{ navigateToContact: (subject: string) => void }> = ({ navigateToContact }) => {
+const OnlineTools = ({ navigateToContact }) => {
   return (
     <div className="animate-fadeIn">
       <PageHeader title="Ready-Made Online Tools" subtitle="Powerful, easy-to-use tools to streamline your workflow." />
@@ -67,7 +66,6 @@ const OnlineTools: React.FC<{ navigateToContact: (subject: string) => void }> = 
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {tools.map((tool, index) => (
-              // FIX: The ServiceCard component was missing required props. With the updated ServiceCard, it can now be used without navigation props.
               <ServiceCard key={index} service={tool} />
             ))}
           </div>

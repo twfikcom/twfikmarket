@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const MailIcon = (props: React.SVGProps<SVGSVGElement>) => (
+export const MailIcon = (props) => (
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
     fill="none" 

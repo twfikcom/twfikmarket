@@ -1,18 +1,6 @@
 import React from 'react';
-import { View } from '../../App.js';
 
-interface BreadcrumbLink {
-  label: string;
-  view: View;
-}
-
-interface BreadcrumbProps {
-  links: BreadcrumbLink[];
-  currentPage: string;
-  setView: (view: View) => void;
-}
-
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ links, currentPage, setView }) => {
+const Breadcrumb = ({ links, currentPage, setView }) => {
   return (
     <nav aria-label="Breadcrumb" className="bg-gray-900/50">
       <div className="container mx-auto px-6 py-3">

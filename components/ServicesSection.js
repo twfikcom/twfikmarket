@@ -4,10 +4,8 @@ import { CodeIcon } from './icons/CodeIcon.js';
 import { LightbulbIcon } from './icons/LightbulbIcon.js';
 import { ToolsIcon } from './icons/ToolsIcon.js';
 import { DomainIcon } from './icons/DomainIcon.js';
-import { Service } from '../types.js';
-import { View } from '../App.js';
 
-const services: { service: Service; page: View['page'] }[] = [
+const services = [
   {
     service: {
       icon: LightbulbIcon,
@@ -34,7 +32,7 @@ const services: { service: Service; page: View['page'] }[] = [
   },
 ];
 
-const ServicesSection: React.FC<{ setView: (view: View) => void }> = ({ setView }) => {
+const ServicesSection = ({ setView }) => {
   return (
     <section id="services" className="py-20 md:py-28 bg-black">
       <div className="container mx-auto px-6">

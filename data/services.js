@@ -1,6 +1,4 @@
-import { WebsiteService } from '../types.js';
-
-export const servicesData: WebsiteService[] = [
+export const servicesData = [
   {
     id: 'personal-wordpress',
     name: 'Personal WordPress Site',

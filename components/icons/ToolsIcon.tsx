@@ -1,14 +1,2 @@
-import React from 'react';
-
-export const ToolsIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    fill="none" 
-    viewBox="0 0 24 24" 
-    strokeWidth={1.5} 
-    stroke="currentColor" 
-    {...props}
-  >
-    <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 3.001v1.875l-2.25.625c-1.121.312-2.25.938-3.033 1.835-1.564 1.8-2.253 4.225-1.745 6.51.508 2.286 2.37 4.155 4.658 4.663 2.286.508 4.709-.18 6.51-1.745.896-.782 1.523-1.912 1.835-3.033l.625-2.25v-1.875M11.25 3.001h1.5v1.875h-1.5v-1.875M11.25 3.001c-.966 0-1.898.19-2.77.533m2.77-.533c.966 0 1.898.19 2.77.533m-5.54 15.467c-.966 0-1.898-.19-2.77-.533m2.77.533c.966 0 1.898-.19 2.77-.533m0 0l-2.25-.625m2.25.625l2.25.625m-15 0l2.25-.625m-2.25.625l-2.25.625m15 0l2.25 2.25 2.25-2.25m-2.25 2.25l-2.25 2.25m-15-4.5l-2.25 2.25 2.25 2.25m-2.25-2.25l2.25-2.25" />
-  </svg>
-);
+// This file is now redundant and should be deleted.
+// The application uses components/icons/ToolsIcon.js.

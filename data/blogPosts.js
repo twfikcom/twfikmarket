@@ -1,6 +1,4 @@
-import { BlogPost } from '../types.js';
-
-export const blogPostsData: BlogPost[] = [
+export const blogPostsData = [
   {
     id: 'future-of-web-dev',
     title: 'The Future of Web Development in the AI Era',

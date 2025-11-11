@@ -3,11 +3,7 @@ import { LocationIcon } from './icons/LocationIcon.js';
 import { MailIcon } from './icons/MailIcon.js';
 import { PhoneIcon } from './icons/PhoneIcon.js';
 
-interface ContactUsProps {
-  subject?: string;
-}
-
-const ContactUs: React.FC<ContactUsProps> = ({ subject = '' }) => {
+const ContactUs = ({ subject = '' }) => {
   const [formSubject, setFormSubject] = useState(subject);
 
   useEffect(() => {

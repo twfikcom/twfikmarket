@@ -1,6 +1,4 @@
-import { AiPrompt } from '../types.js';
-
-export const promptsData: AiPrompt[] = [
+export const promptsData = [
   {
     id: 'marketing-copy-generator',
     name: 'Marketing Copy Generator',

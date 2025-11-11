@@ -1,20 +1,12 @@
 import React from 'react';
-import { Service } from '../types.js';
-import { View } from '../App.js';
 
-interface ServiceCardProps {
-  service: Service;
-  setView?: (view: View) => void;
-  page?: View['page'];
-}
-
-const ServiceCard: React.FC<ServiceCardProps> = ({ service, setView, page }) => {
+const ServiceCard = ({ service, setView, page }) => {
   const Icon = service.icon;
   const isClickable = !!(setView && page);
 
   const handleClick = () => {
     if (isClickable) {
-      setView({ page: page! });
+      setView({ page: page });
     }
   };
 

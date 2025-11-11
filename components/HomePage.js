@@ -1,11 +1,10 @@
 import React from 'react';
 import Hero from './Hero.js';
 import ServicesSection from './ServicesSection.js';
-import { View } from '../App.js';
 import { servicesData } from '../data/services.js';
 import AboutUsPreview from './AboutUsPreview.js';
 
-const WebsiteDevelopmentPreview: React.FC<{setView: (view: View) => void}> = ({ setView }) => {
+const WebsiteDevelopmentPreview = ({setView}) => {
   return (
     <section className="py-20 md:py-28 bg-black">
       <div className="container mx-auto px-6">
@@ -33,7 +32,7 @@ const WebsiteDevelopmentPreview: React.FC<{setView: (view: View) => void}> = ({ 
 };
 
 
-const HomePage: React.FC<{ setView: (view: View) => void }> = ({ setView }) => {
+const HomePage = ({ setView }) => {
   return (
     <>
       <Hero />

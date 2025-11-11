@@ -1,9 +1,8 @@
-import { OnlineTool } from '../types.js';
 import { LightbulbIcon } from '../components/icons/LightbulbIcon.js';
 import { ToolsIcon } from '../components/icons/ToolsIcon.js';
 import { CodeIcon } from '../components/icons/CodeIcon.js';
 
-export const toolsData: OnlineTool[] = [
+export const toolsData = [
   {
     id: 'seo-keyword-analyzer',
     name: "SEO Keyword Analyzer",

@@ -1,12 +1,7 @@
 import React from 'react';
 import { WhatsappIcon } from '../icons/WhatsappIcon.js';
 
-interface CtaButtonsProps {
-  navigateToContact: (subject: string) => void;
-  subject: string;
-}
-
-const CtaButtons: React.FC<CtaButtonsProps> = ({ navigateToContact, subject }) => (
+const CtaButtons = ({ navigateToContact, subject }) => (
   <div className="flex flex-col sm:flex-row gap-4 mt-8">
     <button
       onClick={() => navigateToContact(`Inquiry: ${subject}`)}

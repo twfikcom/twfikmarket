@@ -1,13 +1,7 @@
 import React from 'react';
-import { BlogPost } from '../types.js';
-import { View } from '../App.js';
 import { blogPostsData } from '../data/blogPosts.js';
 
-interface BlogProps {
-  setView: (view: View) => void;
-}
-
-const BlogPostCard: React.FC<{ post: BlogPost; onViewPost: (id: string) => void }> = ({ post, onViewPost }) => (
+const BlogPostCard = ({ post, onViewPost }) => (
   <div className="group relative bg-gray-900/50 rounded-xl border border-gray-800/50 overflow-hidden transition-all duration-300 hover:border-cyan-400/50 hover:-translate-y-2">
     <img src={post.imageUrl} alt={post.title} className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" />
     <div className="p-6">
@@ -22,8 +16,8 @@ const BlogPostCard: React.FC<{ post: BlogPost; onViewPost: (id: string) => void 
   </div>
 );
 
-const Blog: React.FC<BlogProps> = ({ setView }) => {
-  const handleViewPost = (id: string) => {
+const Blog = ({ setView }) => {
+  const handleViewPost = (id) => {
     setView({ page: 'blogPost', id });
   };
 

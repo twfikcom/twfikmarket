@@ -1,11 +1,6 @@
 import React from 'react';
-import { View } from '../App.js';
 
-interface AboutUsPreviewProps {
-  setView: (view: View) => void;
-}
-
-const AboutUsPreview: React.FC<AboutUsPreviewProps> = ({ setView }) => {
+const AboutUsPreview = ({ setView }) => {
   return (
     <section className="py-20 md:py-28 bg-black">
       <div className="container mx-auto px-6 text-center max-w-4xl">

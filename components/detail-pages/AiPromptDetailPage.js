@@ -1,18 +1,10 @@
 import React from 'react';
-import { AiPrompt } from '../../types.js';
-import { View } from '../../App.js';
 import Breadcrumb from '../ui/Breadcrumb.js';
 import CtaButtons from '../ui/CtaButtons.js';
 import FaqAccordion from '../ui/FaqAccordion.js';
 import { promptsData } from '../../data/prompts.js';
 
-interface AiPromptDetailPageProps {
-  prompt: AiPrompt;
-  navigateToContact: (subject: string) => void;
-  setView: (view: View) => void;
-}
-
-const AiPromptDetailPage: React.FC<AiPromptDetailPageProps> = ({ prompt, navigateToContact, setView }) => {
+const AiPromptDetailPage = ({ prompt, navigateToContact, setView }) => {
   const otherPrompts = promptsData.filter(p => p.id !== prompt.id).slice(0, 2);
 
   return (

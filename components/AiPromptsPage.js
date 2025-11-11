@@ -1,10 +1,8 @@
 import React from 'react';
 import PageHeader from './ui/PageHeader.js';
-import { AiPrompt } from '../types.js';
-import { View } from '../App.js';
 import { promptsData } from '../data/prompts.js';
 
-const PromptCard: React.FC<{ prompt: AiPrompt; onView: (id: string) => void; }> = ({ prompt, onView }) => (
+const PromptCard = ({ prompt, onView }) => (
   <div 
     onClick={() => onView(prompt.id)}
     className="group relative bg-gray-900/50 p-8 rounded-xl border border-gray-800/50 transition-all duration-300 hover:border-cyan-400/50 hover:-translate-y-2 cursor-pointer h-full flex flex-col"
@@ -23,9 +21,9 @@ const PromptCard: React.FC<{ prompt: AiPrompt; onView: (id: string) => void; }> 
 );
 
 
-const AiPromptsPage: React.FC<{ setView: (view: View) => void }> = ({ setView }) => {
+const AiPromptsPage = ({ setView }) => {
   
-  const handleViewPrompt = (id: string) => {
+  const handleViewPrompt = (id) => {
     setView({ page: 'promptDetail', id });
   };
   

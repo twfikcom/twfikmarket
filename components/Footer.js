@@ -1,11 +1,6 @@
 import React from 'react';
-import { View } from '../App.js';
 
-interface FooterProps {
-  setView: (view: View) => void;
-}
-
-const Footer: React.FC<FooterProps> = ({ setView }) => {
+const Footer = ({ setView }) => {
   return (
     <footer className="bg-black border-t border-gray-800">
       <div className="container mx-auto px-6 py-12">

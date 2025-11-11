@@ -20,28 +20,18 @@ import { promptsData } from './data/prompts.js';
 import { toolsData } from './data/tools.js';
 import { blogPostsData } from './data/blogPosts.js';
 
-export type Page = 
-  'home' | 'about' | 'blog' | 'contact' | 
-  'websites' | 'prompts' | 'tools' | 'domains' |
-  'websiteDetail' | 'promptDetail' | 'toolDetail' | 'blogPost';
-
-export interface View {
-  page: Page;
-  id?: string;
-}
-
-const App: React.FC = () => {
-  const [view, setView] = useState<View>({ page: 'home' });
+const App = () => {
+  const [view, setView] = useState({ page: 'home' });
   const [contactSubject, setContactSubject] = useState('');
 
-  const navigateToContact = (subject: string) => {
+  const navigateToContact = (subject) => {
     setContactSubject(subject);
     setView({ page: 'contact' });
   };
 
   // SEO and Schema Management
   useEffect(() => {
-    const setSeoData = (title: string, description: string, schema: object) => {
+    const setSeoData = (title, description, schema) => {
       document.title = title;
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) {
@@ -144,7 +134,7 @@ const App: React.FC = () => {
   );
 };
 
-const BackgroundGrid: React.FC = () => (
+const BackgroundGrid = () => (
   <style>{`
     .bg-grid-gray-700\\/\\[0\\.2\\] {
       background-image: linear-gradient(to right, rgba(107, 114, 128, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(107, 114, 128, 0.1) 1px, transparent 1px);
@@ -153,7 +143,7 @@ const BackgroundGrid: React.FC = () => (
   `}</style>
 );
 
-const AppWrapper: React.FC = () => {
+const AppWrapper = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
