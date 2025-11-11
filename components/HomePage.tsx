@@ -3,6 +3,7 @@ import Hero from './Hero';
 import ServicesSection from './ServicesSection';
 import { View } from '../App';
 import { servicesData } from '../data/services';
+import AboutUsPreview from './AboutUsPreview';
 
 const WebsiteDevelopmentPreview: React.FC<{setView: (view: View) => void}> = ({ setView }) => {
   return (
@@ -37,6 +38,7 @@ const HomePage: React.FC<{ setView: (view: View) => void }> = ({ setView }) => {
     <>
       <Hero />
       <WebsiteDevelopmentPreview setView={setView} />
+      <AboutUsPreview setView={setView} />
       <ServicesSection setView={setView} />
     </>
   );
