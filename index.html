@@ -8,6 +8,22 @@
     <title>TWFIK - Web Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+      body {
+        position: relative;
+        font-family: sans-serif;
+      }
+      .background-grid {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        width: 100%; height: 100%;
+        background-image: linear-gradient(to right, rgba(107, 114, 128, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(107, 114, 128, 0.1) 1px, transparent 1px);
+        background-size: 40px 40px;
+        z-index: 0;
+      }
+      .content-wrapper {
+        position: relative;
+        z-index: 10;
+      }
       @keyframes flash {
         0%, 100% {
           opacity: 1;
@@ -140,23 +156,15 @@
         animation: lightning-strike 2.5s ease-in-out infinite;
       }
     </style>
-    <!-- 1. The Import Map (The "Dictionary" for JS imports) -->
-    <script type="importmap">
-    {
-      "imports": {
-        "react": "https://esm.sh/react@18.2.0",
-        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
-        "react-dom/": "https://esm.sh/react-dom@18.2.0/",
-        "react/": "https://esm.sh/react@18.2.0/"
-      }
-    }
-    </script>
-
-    <!-- 2. The In-Browser Compiler (The "Engine" to run TSX) -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <!-- 3. The Application Entrypoint (The "Recipe") -->
-    <script type="text/babel" data-presets="react,typescript" data-type="module" src="./index.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
 </head>
   <body class="bg-black text-white">
     <div id="root"></div>
