@@ -142,15 +142,15 @@
     </style>
     <!-- 1. The Import Map (The "Dictionary" for JS imports) -->
     <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@18.2.0",
-    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/"
-  }
-}
-</script>
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18.2.0",
+        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+        "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+        "react/": "https://esm.sh/react@18.2.0/"
+      }
+    }
+    </script>
 
     <!-- 2. The In-Browser Compiler (The "Engine" to run TSX) -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
