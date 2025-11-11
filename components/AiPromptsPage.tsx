@@ -1,8 +1,8 @@
 import React from 'react';
-import PageHeader from './ui/PageHeader';
-import { AiPrompt } from '../types';
-import { View } from '../App';
-import { promptsData } from '../data/prompts';
+import PageHeader from './ui/PageHeader.tsx';
+import { AiPrompt } from '../types.ts';
+import { View } from '../App.tsx';
+import { promptsData } from '../data/prompts.ts';
 
 const PromptCard: React.FC<{ prompt: AiPrompt; onView: (id: string) => void; }> = ({ prompt, onView }) => (
   <div 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { WhatsappIcon } from './icons/WhatsappIcon';
+import { WhatsappIcon } from './icons/WhatsappIcon.tsx';
 
 const PageHeader = ({ title, subtitle }: { title: string; subtitle: string }) => (
   <div className="text-center py-16 md:py-24 bg-black">

@@ -1,10 +1,10 @@
 import React from 'react';
-import { AiPrompt } from '../../types';
-import { View } from '../../App';
-import Breadcrumb from '../ui/Breadcrumb';
-import CtaButtons from '../ui/CtaButtons';
-import FaqAccordion from '../ui/FaqAccordion';
-import { promptsData } from '../../data/prompts';
+import { AiPrompt } from '../../types.ts';
+import { View } from '../../App.tsx';
+import Breadcrumb from '../ui/Breadcrumb.tsx';
+import CtaButtons from '../ui/CtaButtons.tsx';
+import FaqAccordion from '../ui/FaqAccordion.tsx';
+import { promptsData } from '../../data/prompts.ts';
 
 interface AiPromptDetailPageProps {
   prompt: AiPrompt;

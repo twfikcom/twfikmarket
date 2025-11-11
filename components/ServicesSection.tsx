@@ -1,11 +1,11 @@
 import React from 'react';
-import ServiceCard from './ServiceCard';
-import { CodeIcon } from './icons/CodeIcon';
-import { LightbulbIcon } from './icons/LightbulbIcon';
-import { ToolsIcon } from './icons/ToolsIcon';
-import { DomainIcon } from './icons/DomainIcon';
-import { Service } from '../types';
-import { View } from '../App';
+import ServiceCard from './ServiceCard.tsx';
+import { CodeIcon } from './icons/CodeIcon.tsx';
+import { LightbulbIcon } from './icons/LightbulbIcon.tsx';
+import { ToolsIcon } from './icons/ToolsIcon.tsx';
+import { DomainIcon } from './icons/DomainIcon.tsx';
+import { Service } from '../types.ts';
+import { View } from '../App.tsx';
 
 const services: { service: Service; page: View['page'] }[] = [
   {

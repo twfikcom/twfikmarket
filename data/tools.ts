@@ -1,7 +1,7 @@
-import { OnlineTool } from '../types';
-import { LightbulbIcon } from '../components/icons/LightbulbIcon';
-import { ToolsIcon } from '../components/icons/ToolsIcon';
-import { CodeIcon } from '../components/icons/CodeIcon';
+import { OnlineTool } from '../types.ts';
+import { LightbulbIcon } from '../components/icons/LightbulbIcon.tsx';
+import { ToolsIcon } from '../components/icons/ToolsIcon.tsx';
+import { CodeIcon } from '../components/icons/CodeIcon.tsx';
 
 export const toolsData: OnlineTool[] = [
   {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { WhatsappIcon } from '../icons/WhatsappIcon';
+import { WhatsappIcon } from '../icons/WhatsappIcon.tsx';
 
 interface CtaButtonsProps {
   navigateToContact: (subject: string) => void;

@@ -1,8 +1,8 @@
 import React from 'react';
-import PageHeader from './ui/PageHeader';
-import { OnlineTool } from '../types';
-import { View } from '../App';
-import { toolsData } from '../data/tools';
+import PageHeader from './ui/PageHeader.tsx';
+import { OnlineTool } from '../types.ts';
+import { View } from '../App.tsx';
+import { toolsData } from '../data/tools.ts';
 
 const ToolCard: React.FC<{ tool: OnlineTool; onView: (id: string) => void; }> = ({ tool, onView }) => {
   const Icon = tool.icon;

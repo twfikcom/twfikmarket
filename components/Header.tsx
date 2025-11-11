@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Page, View } from '../App';
+import { Page, View } from '../App.tsx';
 
 const AnimatedLogo: React.FC<{setView: (view: View) => void}> = ({ setView }) => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Service } from '../types';
-import { View } from '../App';
+import { Service } from '../types.ts';
+import { View } from '../App.tsx';
 
 interface ServiceCardProps {
   service: Service;

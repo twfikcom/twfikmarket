@@ -1,10 +1,10 @@
 import React from 'react';
-import { OnlineTool } from '../../types';
-import { View } from '../../App';
-import Breadcrumb from '../ui/Breadcrumb';
-import CtaButtons from '../ui/CtaButtons';
-import FaqAccordion from '../ui/FaqAccordion';
-import { toolsData } from '../../data/tools';
+import { OnlineTool } from '../../types.ts';
+import { View } from '../../App.tsx';
+import Breadcrumb from '../ui/Breadcrumb.tsx';
+import CtaButtons from '../ui/CtaButtons.tsx';
+import FaqAccordion from '../ui/FaqAccordion.tsx';
+import { toolsData } from '../../data/tools.ts';
 
 interface ToolDetailPageProps {
   tool: OnlineTool;

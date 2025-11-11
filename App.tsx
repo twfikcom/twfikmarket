@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import HomePage from './components/HomePage';
-import AboutUs from './components/AboutUs';
-import Blog from './components/Blog';
-import ContactUs from './components/ContactUs';
-import WebsiteDevelopmentPage from './components/WebsiteDevelopmentPage';
-import AiPromptsPage from './components/AiPromptsPage';
-import OnlineToolsPage from './components/OnlineToolsPage';
-import PremiumDomainsPage from './components/PremiumDomainsPage';
-import WebsiteServiceDetailPage from './components/detail-pages/WebsiteServiceDetailPage';
-import AiPromptDetailPage from './components/detail-pages/AiPromptDetailPage';
-import ToolDetailPage from './components/detail-pages/ToolDetailPage';
-import BlogPostPage from './components/BlogPostPage';
-import Loader from './components/Loader';
+import Header from './components/Header.tsx';
+import Footer from './components/Footer.tsx';
+import HomePage from './components/HomePage.tsx';
+import AboutUs from './components/AboutUs.tsx';
+import Blog from './components/Blog.tsx';
+import ContactUs from './components/ContactUs.tsx';
+import WebsiteDevelopmentPage from './components/WebsiteDevelopmentPage.tsx';
+import AiPromptsPage from './components/AiPromptsPage.tsx';
+import OnlineToolsPage from './components/OnlineToolsPage.tsx';
+import PremiumDomainsPage from './components/PremiumDomainsPage.tsx';
+import WebsiteServiceDetailPage from './components/detail-pages/WebsiteServiceDetailPage.tsx';
+import AiPromptDetailPage from './components/detail-pages/AiPromptDetailPage.tsx';
+import ToolDetailPage from './components/detail-pages/ToolDetailPage.tsx';
+import BlogPostPage from './components/BlogPostPage.tsx';
+import Loader from './components/Loader.tsx';
 
-import { servicesData } from './data/services';
-import { promptsData } from './data/prompts';
-import { toolsData } from './data/tools';
-import { blogPostsData } from './data/blogPosts';
+import { servicesData } from './data/services.ts';
+import { promptsData } from './data/prompts.ts';
+import { toolsData } from './data/tools.ts';
+import { blogPostsData } from './data/blogPosts.ts';
 
 export type Page = 
   'home' | 'about' | 'blog' | 'contact' | 

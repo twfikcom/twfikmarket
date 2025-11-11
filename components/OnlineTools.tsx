@@ -1,10 +1,10 @@
 import React from 'react';
-import ServiceCard from './ServiceCard';
-import { LightbulbIcon } from './icons/LightbulbIcon';
-import { ToolsIcon } from './icons/ToolsIcon';
-import { CodeIcon } from './icons/CodeIcon';
-import { Service } from '../types';
-import { WhatsappIcon } from './icons/WhatsappIcon';
+import ServiceCard from './ServiceCard.tsx';
+import { LightbulbIcon } from './icons/LightbulbIcon.tsx';
+import { ToolsIcon } from './icons/ToolsIcon.tsx';
+import { CodeIcon } from './icons/CodeIcon.tsx';
+import { Service } from '../types.ts';
+import { WhatsappIcon } from './icons/WhatsappIcon.tsx';
 
 
 const PageHeader = ({ title, subtitle }: { title: string; subtitle: string }) => (

@@ -1,7 +1,7 @@
 import React from 'react';
-import PageHeader from './ui/PageHeader';
-import CtaButtons from './ui/CtaButtons';
-import FaqAccordion from './ui/FaqAccordion';
+import PageHeader from './ui/PageHeader.tsx';
+import CtaButtons from './ui/CtaButtons.tsx';
+import FaqAccordion from './ui/FaqAccordion.tsx';
 
 // FIX: Defined a dedicated interface for DomainRow props and typed the component
 // with React.FC to resolve type errors with special React props like 'key'.

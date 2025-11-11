@@ -1,10 +1,10 @@
 import React from 'react';
-import { WebsiteService } from '../../types';
-import { View } from '../../App';
-import Breadcrumb from '../ui/Breadcrumb';
-import CtaButtons from '../ui/CtaButtons';
-import FaqAccordion from '../ui/FaqAccordion';
-import { servicesData } from '../../data/services';
+import { WebsiteService } from '../../types.ts';
+import { View } from '../../App.tsx';
+import Breadcrumb from '../ui/Breadcrumb.tsx';
+import CtaButtons from '../ui/CtaButtons.tsx';
+import FaqAccordion from '../ui/FaqAccordion.tsx';
+import { servicesData } from '../../data/services.ts';
 
 interface WebsiteServiceDetailPageProps {
   service: WebsiteService;

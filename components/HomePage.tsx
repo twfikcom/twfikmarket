@@ -1,9 +1,9 @@
 import React from 'react';
-import Hero from './Hero';
-import ServicesSection from './ServicesSection';
-import { View } from '../App';
-import { servicesData } from '../data/services';
-import AboutUsPreview from './AboutUsPreview';
+import Hero from './Hero.tsx';
+import ServicesSection from './ServicesSection.tsx';
+import { View } from '../App.tsx';
+import { servicesData } from '../data/services.ts';
+import AboutUsPreview from './AboutUsPreview.tsx';
 
 const WebsiteDevelopmentPreview: React.FC<{setView: (view: View) => void}> = ({ setView }) => {
   return (

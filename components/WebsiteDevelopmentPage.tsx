@@ -1,8 +1,8 @@
 import React from 'react';
-import PageHeader from './ui/PageHeader';
-import { WebsiteService } from '../types';
-import { View } from '../App';
-import { servicesData } from '../data/services';
+import PageHeader from './ui/PageHeader.tsx';
+import { WebsiteService } from '../types.ts';
+import { View } from '../App.tsx';
+import { servicesData } from '../data/services.ts';
 
 const PricingCard: React.FC<{ service: WebsiteService; onSelect: (id: string) => void; }> = ({ service, onSelect }) => (
   <div className={`relative p-8 rounded-xl border flex flex-col transition-all duration-300 ${service.popular ? 'bg-gray-900/50 border-cyan-400/50' : 'bg-gray-900/30 border-gray-800/50 hover:border-cyan-400/50'}`}>

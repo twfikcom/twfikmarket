@@ -1,4 +1,4 @@
-import { AiPrompt } from '../types';
+import { AiPrompt } from '../types.ts';
 
 export const promptsData: AiPrompt[] = [
   {

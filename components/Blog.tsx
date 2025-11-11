@@ -1,7 +1,7 @@
 import React from 'react';
-import { BlogPost } from '../types';
-import { View } from '../App';
-import { blogPostsData } from '../data/blogPosts';
+import { BlogPost } from '../types.ts';
+import { View } from '../App.tsx';
+import { blogPostsData } from '../data/blogPosts.ts';
 
 interface BlogProps {
   setView: (view: View) => void;

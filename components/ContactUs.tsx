@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { LocationIcon } from './icons/LocationIcon';
-import { MailIcon } from './icons/MailIcon';
-import { PhoneIcon } from './icons/PhoneIcon';
+import { LocationIcon } from './icons/LocationIcon.tsx';
+import { MailIcon } from './icons/MailIcon.tsx';
+import { PhoneIcon } from './icons/PhoneIcon.tsx';
 
 interface ContactUsProps {
   subject?: string;

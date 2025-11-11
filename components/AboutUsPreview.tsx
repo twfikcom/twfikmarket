@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from '../App';
+import { View } from '../App.tsx';
 
 interface AboutUsPreviewProps {
   setView: (view: View) => void;

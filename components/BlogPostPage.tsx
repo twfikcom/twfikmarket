@@ -1,6 +1,6 @@
 import React from 'react';
-import { BlogPost } from '../types';
-import { View } from '../App';
+import { BlogPost } from '../types.ts';
+import { View } from '../App.tsx';
 
 interface BlogPostPageProps {
   post: BlogPost;
